@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="onClick()">reward video for a golden coin</button>
+  <p>you will get almost any thing you want but usually takes a little longer than your expect</p>
+     <p>bronze coins:{{bcoins}}</p>
+     <p>silver coins:{{scoins}}</p>
+     <p>golden coins:{{gcoins}}</p>
+    <progress-bar [progress]="bcoins"></progress-bar>
+     <button ion-item (tap)="interval()">tap</button>
+</ion-content>
