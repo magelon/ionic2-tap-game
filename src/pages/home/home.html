@@ -1,15 +1,32 @@
+
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/default.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Coins,inc.</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="onClick()">reward video for a golden coin</button>
+  <button ion-button (click)="onClick()" 
+      [disabled]='true'
+      text-wrap>
+      watching a reward video for a golden coin
+
+  </button>
+    <!--
   <p>you will get almost any thing you want but usually takes a little longer than your expect</p>
-     <p>bronze coins:{{bcoins}}</p>
+   
+    -->  <p>bronze coins:{{bcoins}}</p>
      <p>silver coins:{{scoins}}</p>
      <p>golden coins:{{gcoins}}</p>
     <progress-bar [progress]="bcoins"></progress-bar>
-     <button ion-item (tap)="interval()">tap</button>
+   
+     <button ion-button full color="danger" (tap)="interval()">tap</button>
 </ion-content>
